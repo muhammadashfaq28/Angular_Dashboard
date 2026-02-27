@@ -1,0 +1,9 @@
+<h2>Patients</h2>
+
+<ul>
+  @for (patient of patients(); track patient.id) {
+    <li (click)="selectPatient(patient)">
+      {{ patient.name }}
+    </li>
+  }
+</ul>

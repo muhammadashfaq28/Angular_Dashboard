@@ -1,0 +1,25 @@
+<div class="container my-5 main" [class.dark]="isDarkMode()">
+
+  <button (click)="decrement()" class="btn btn-success rounded-pill p-3">Decrease me</button>
+  
+  <span class="mx-3 fs-3">{{ counter() }}</span>
+  
+  <button (click)="increment()" class="btn btn-danger rounded-pill p-3">Increase me</button>
+
+  <button (click)="toggle()" class="btn btn-info rounded-pill p-3 m-4">Toggle List</button>
+
+    <button (click)="toggleTheme()" class="btn btn-info rounded-pill p-3 ms-auto dark-btn">
+     {{ isDarkMode() ? 'Light' : 'Dark' }} Mode
+  </button>
+
+
+  <ul *ngIf="showList()" class="list-group list-group-item-action active">
+    <li *ngFor="let item of list()" appFirst="item" class="list-group-item list-group-item-primary" [FirstDirective]="item">
+
+      {{item | custom}} 
+
+    </li>
+  </ul>
+
+
+</div>

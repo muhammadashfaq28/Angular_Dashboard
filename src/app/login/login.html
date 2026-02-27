@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center vh-100 login-bg">
+    <div class="card shadow-lg p-4 login-card">
+      <h3 class="text-center mb-4 fw-bold text-primary">
+        Please Login <i class="bi bi-door-open icon"></i>
+      </h3>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+        <div class="mb-3">
+          <label class="form-label">Email address</label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            placeholder="Enter your email"
+          />
+
+          @if (email?.invalid && email?.touched) {
+            <div class="text-danger mt-1">
+              Valid email is required
+            </div>
+          }
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Enter your password"
+          />
+
+          @if (password?.invalid && password?.touched) {
+            <div class="text-danger mt-1">
+              Password is required (min 6 characters)
+            </div>
+          }
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="loginForm.invalid">
+          Login
+        </button>
+
+        <a href="#" class="sign-in">
+          Sign in to access your dashboard
+          <i class="bi bi-door-closed-fill"></i>
+        </a>
+
+      </form>
+    </div>
+  </div>
+</div>

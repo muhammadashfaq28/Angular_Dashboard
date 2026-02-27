@@ -1,0 +1,21 @@
+.container {
+  background-color: rgb(247, 245, 245);
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+  transition: 0.3s;
+  border-radius: 2rem;
+}
+
+.container.dark {
+  background-color: #121212;
+  color: white;
+}
+.dark-btn{
+    margin-left: auto;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;   
+    align-items: center;
+}

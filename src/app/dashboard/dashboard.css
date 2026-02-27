@@ -1,0 +1,50 @@
+.dashboard-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+}
+
+
+.logo-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 70px;
+  transition: 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.active-link {
+  background-color: #e8270a !important;
+}
+
+
+.top-header {
+  border-bottom: 1px solid #060a12;
+  background-color: #303d4e;
+}
+
+
+.content {
+  background-color: #efefef;
+}

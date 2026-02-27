@@ -1,0 +1,29 @@
+<h2>Patient Detail</h2>
+
+<div class="detail-box">
+  @if (patient()) {
+    <p><b>Name:</b> {{ patient()!.name }}</p>
+    <p><b>Age:</b> {{ patient()!.age }}</p>
+    <p><b>Address:</b> {{ patient()!.address }}</p>
+    <p><b>Disease:</b> {{ patient()!.disease }}</p>
+    <p><b>CheckAt:</b> {{ patient()!.CheckAt }}</p>
+    <p><b>Next_Appointmen:</b> {{ patient()!.Next_Appointment }}</p>
+  } @else {
+    <p>Select a patient to see details</p>
+  }
+
+  <!-- @if (patient()) {
+  @for (item of patient() | keyvalue : keepOrder; track item.key) {
+  <p>
+    <b>{{ item.key }}:</b>
+    {{ item.value }}
+  </p>
+  }
+ 
+  }
+   @else {
+     <p>Select a patient to see details</p>
+  } -->
+
+ 
+</div>
